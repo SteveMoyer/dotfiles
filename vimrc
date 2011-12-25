@@ -205,3 +205,6 @@ function! OpenURL()
 endfunction
 map <Leader>w :call OpenURL()<CR>
 
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+nnoremap <leader><leader> <c-^>
