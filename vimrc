@@ -188,8 +188,8 @@ set smartcase
 
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-set tags=./tags;
-
+autocmd FileType java set tags=tags,./tags;~/tags
+set wildignore+=.git,*.jar,*.class
 let g:fuf_splitPathMatching=1
 
 " Open URL
