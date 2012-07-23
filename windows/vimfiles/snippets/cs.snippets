@@ -1,0 +1,25 @@
+#test
+snippet t
+	[Test] public void ${1:ShouldDoWhat}()
+	{
+	${2:throw new NotImplementedException();}
+	}
+snippet f	
+	using NUnit.Framework;
+	public class ${1}
+	{
+		${2}
+	}
+snippet c
+	public class ${1}
+	{
+		${2}
+	}
+snippet ctr
+		public ${1:`Filename()`}(${2:type} ${3:name})
+		{
+			this.${4:$3}= ${5:$3};	
+		}
+		${6:$2} ${7:$3};
+
+		
