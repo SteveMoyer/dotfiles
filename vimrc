@@ -9,7 +9,7 @@ set backspace=indent,eol,start
 
 set nobackup
 set nowritebackup
-set history=50		" keep 50 lines of command line history
+set history=250		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
@@ -125,17 +125,12 @@ nmap <F1> <Esc>
 " Press ^F from insert mode to insert the current file name
 imap <C-F> <C-R>=expand("%")<CR>
 
-" Maps autocomplete to tab
-imap <Tab> <C-N>
 
 imap <C-L> <Space>=><Space>
 
 " Display extra whitespace
 " set list listchars=tab:»·,trail:·
 
-" Edit routes
-command! Rroutes :e config/routes.rb
-command! Rschema :e db/schema.rb
 
 " Local config
 if filereadable(".vimrc.local")
@@ -172,8 +167,7 @@ set smartcase
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 autocmd FileType java set tags=tags,./tags;~/tags
-set wildignore+=.git,*.jar,*.class,android-sdk/**,bin/**
-let g:fuf_splitPathMatching=1
+set wildignore+=.git,*.jar,*.class,android-sdk/**,bin/**,obj/
 
 " Open URL
 command -bar -nargs=1 OpenURL :!open <args>
@@ -197,3 +191,4 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
+set runtimepath^=~/.vim/bundle/ctrlp.vim
