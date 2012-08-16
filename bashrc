@@ -118,6 +118,5 @@ if [ -s "/usr/lib/jvm/java-7-oracle" ] ; then
   export JDK_HOME='/usr/lib/jvm/java-7-oracle'
 fi 
 
-export PATH+=';$JAVA_HOME/bin'
 export ANT_ARGS='-logger org.apache.tools.ant.listener.AnsiColorLogger'
 set -o vi

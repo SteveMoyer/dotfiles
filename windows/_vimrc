@@ -182,7 +182,7 @@ function! OpenURL()
   endif
 endfunction
 map <Leader>w :call OpenURL()<CR>
-let g:ctrlp_root_markers = ['.git','tags.sh']
+let g:ctrlp_root_markers = ['.git']
 call pathogen#infect()
 nnoremap <leader><leader> <c-^>
 noremap  <Up> ""
