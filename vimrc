@@ -150,7 +150,7 @@ set smartcase
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 autocmd FileType java set tags=tags,./tags;~/tags
-set wildignore+=.git,*.jar,*.class,android-sdk/**,bin/**,obj/
+set wildignore+=.git,*.jar,*.class,android-sdk,bin,obj,target,work
 
 " Open URL
 command -bar -nargs=1 OpenURL :!open <args>

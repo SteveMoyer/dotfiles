@@ -107,8 +107,17 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export RUBYOPT="-I$HOME/./rvm/gems/ruby-1.9.2-head/gems/bundler-1.0.18/lib -rbundler/setup"
-export JAVA_HOME='/usr/lib/jvm/java-7-oracle'
-export JDK_HOME='/usr/lib/jvm/java-7-oracle'
+
+if [ -s "/usr/lib/jvm/jdk1.6.0_32" ] ; then
+  export JAVA_HOME='/usr/lib/jvm/jdk1.6.0_32'
+  export JDK_HOME='/usr/lib/jvm/jdk1.6.0_32'
+fi 
+
+if [ -s "/usr/lib/jvm/java-7-oracle" ] ; then
+  export JAVA_HOME='/usr/lib/jvm/java-7-oracle'
+  export JDK_HOME='/usr/lib/jvm/java-7-oracle'
+fi 
+
+export PATH+=';$JAVA_HOME/bin'
 export ANT_ARGS='-logger org.apache.tools.ant.listener.AnsiColorLogger'
 set -o vi

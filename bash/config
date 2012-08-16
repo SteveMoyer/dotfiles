@@ -1,0 +1,3 @@
+function tags ( ) {
+find .  \( -iname "*.java" -o -iname "*.jelly" -o -iname "*.cs" -o -iname "*.groovy" \)  > tagfilelist; ctags -ftags -L tagfilelist; rm tagfilelist;
+}
