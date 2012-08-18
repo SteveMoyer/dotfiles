@@ -182,7 +182,7 @@ function! OpenURL()
   endif
 endfunction
 map <Leader>w :call OpenURL()<CR>
-let g:ctrlp_root_markers = ['.git']
+let g:ctrlp_root_markers = ['.git','tags']
 call pathogen#infect()
 nnoremap <leader><leader> <c-^>
 noremap  <Up> ""
@@ -193,3 +193,4 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
+set runtimepath^=~/_vimfiles/bundle/ctrlp.vim
