@@ -164,7 +164,8 @@ function! OpenURL()
   endif
 endfunction
 map <Leader>w :call OpenURL()<CR>
-
+call pathogen#infect()
+call pathogen#helptags()
 nnoremap <leader><leader> <c-^>
 noremap  <Up> ""
 noremap! <Up> <Esc>
