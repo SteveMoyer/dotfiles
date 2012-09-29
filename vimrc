@@ -6,7 +6,7 @@ set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
+set hidden
 set nobackup
 set nowritebackup
 set history=250		" keep 50 lines of command line history
@@ -163,16 +163,16 @@ function! OpenURL()
     echo "No URI found in line."
   endif
 endfunction
+ let g:ctrlp_working_path_mode = 2
+
+  let g:ctrlp_root_markers = ['.ctrlp']
 map <Leader>w :call OpenURL()<CR>
 call pathogen#infect()
 call pathogen#helptags()
+autocmd Filetype java set omnifunc=javacomplete#Complete
+autocmd Filetype java set completefunc=javacomplete#CompleteParamsInfo
+inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
+inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
 nnoremap <leader><leader> <c-^>
-noremap  <Up> ""
-noremap! <Up> <Esc>
-noremap  <Down> ""
-noremap! <Down> <Esc>
-noremap  <Left> ""
-noremap! <Left> <Esc>
-noremap  <Right> ""
-noremap! <Right> <Esc>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+imap jk <Esc>
