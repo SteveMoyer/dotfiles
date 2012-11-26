@@ -8,6 +8,7 @@ set nocompatible
 set backspace=indent,eol,start
 set hidden
 set nobackup
+set noswapfile
 set nowritebackup
 set history=250		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -92,9 +93,8 @@ map <Leader>h :set invhls <CR>
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+"Toggle Tagbar
+map <Leader>t :TagbarToggle<CR>
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
@@ -166,11 +166,14 @@ endfunction
  let g:ctrlp_working_path_mode = 2
 
   let g:ctrlp_root_markers = ['.ctrlp']
+  let g:vimwiki_list = [{'path': '~/vimwiki/',
+                       \ 'syntax': 'markdown', 'ext': '.md'}]
 map <Leader>w :call OpenURL()<CR>
 call pathogen#infect()
 call pathogen#helptags()
 autocmd Filetype java set omnifunc=javacomplete#Complete
 autocmd Filetype java set completefunc=javacomplete#CompleteParamsInfo
+imap <C-Tab> <c-r>=TriggerSnippet()<CR>
 inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
 inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
 nnoremap <leader><leader> <c-^>
