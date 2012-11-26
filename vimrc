@@ -177,5 +177,6 @@ imap <C-Tab> <c-r>=TriggerSnippet()<CR>
 inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P> 
 inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
 nnoremap <leader><leader> <c-^>
+nmap <F5> :make<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 imap jk <Esc>

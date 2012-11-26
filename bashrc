@@ -60,6 +60,6 @@ if [ -s "/usr/lib/jvm/java-7-oracle" ] ; then
   export JAVA_HOME='/usr/lib/jvm/java-7-oracle'
   export JDK_HOME='/usr/lib/jvm/java-7-oracle'
 fi 
-
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export ANT_ARGS='-logger org.apache.tools.ant.listener.AnsiColorLogger'
 set -o vi
