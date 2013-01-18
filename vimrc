@@ -171,6 +171,9 @@ endfunction
 map <Leader>w :call OpenURL()<CR>
 call pathogen#infect()
 call pathogen#helptags()
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+let vimclojure#WantNailgun = 1
 autocmd Filetype java set omnifunc=javacomplete#Complete
 autocmd Filetype java set completefunc=javacomplete#CompleteParamsInfo
 imap <C-Tab> <c-r>=TriggerSnippet()<CR>

@@ -40,6 +40,7 @@ else
 fi
 unset color_prompt force_color_prompt
 
+export VIMCLOJURE_SERVER_JAR="$HOME/apps/ng-server/server-2.3.6.jar"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -63,3 +64,6 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export ANT_ARGS='-logger org.apache.tools.ant.listener.AnsiColorLogger'
 set -o vi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
